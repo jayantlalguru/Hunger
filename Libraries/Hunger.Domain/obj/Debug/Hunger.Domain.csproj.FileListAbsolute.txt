@@ -1,0 +1,5 @@
+D:\Work\Projects\Hunger\Libraries\Hunger.Domain\bin\Debug\Hunger.Domain.dll
+D:\Work\Projects\Hunger\Libraries\Hunger.Domain\bin\Debug\Hunger.Domain.pdb
+D:\Work\Projects\Hunger\Libraries\Hunger.Domain\obj\Debug\Hunger.Domain.dll
+D:\Work\Projects\Hunger\Libraries\Hunger.Domain\obj\Debug\Hunger.Domain.pdb
+D:\Work\Projects\Hunger\Libraries\Hunger.Domain\obj\Debug\Hunger.Domain.csprojResolveAssemblyReference.cache

@@ -1,0 +1,9 @@
+D:\Work\Projects\Hunger\Libraries\Hunger.DAL\bin\Debug\Hunger.DAL.dll
+D:\Work\Projects\Hunger\Libraries\Hunger.DAL\bin\Debug\Hunger.DAL.pdb
+D:\Work\Projects\Hunger\Libraries\Hunger.DAL\bin\Debug\Dapper.dll
+D:\Work\Projects\Hunger\Libraries\Hunger.DAL\bin\Debug\Hunger.Domain.dll
+D:\Work\Projects\Hunger\Libraries\Hunger.DAL\bin\Debug\Hunger.Domain.pdb
+D:\Work\Projects\Hunger\Libraries\Hunger.DAL\bin\Debug\Dapper.xml
+D:\Work\Projects\Hunger\Libraries\Hunger.DAL\obj\Debug\Hunger.DAL.csprojResolveAssemblyReference.cache
+D:\Work\Projects\Hunger\Libraries\Hunger.DAL\obj\Debug\Hunger.DAL.dll
+D:\Work\Projects\Hunger\Libraries\Hunger.DAL\obj\Debug\Hunger.DAL.pdb
