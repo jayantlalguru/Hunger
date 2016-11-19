@@ -8,8 +8,13 @@ using System;
 
 namespace Hunger.DAL.Account
 {
-    public class LoginDAL : ConnectionProperties
+    public class AdminLoginDAL : ConnectionProperties
     {
+        /// <summary>
+        /// Create an Admin user
+        /// </summary>
+        /// <param name="adminUser"></param>
+        /// <returns></returns>
         public int CreateAdminUser(AdminUser adminUser)
         {   
             using (var dbConnection = Connection)

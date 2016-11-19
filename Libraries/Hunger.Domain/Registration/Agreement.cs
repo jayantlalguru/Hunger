@@ -13,5 +13,6 @@ namespace Hunger.Domain.Registration
         public override int? CreatedBy { get; set; }
         public override int? ModifiedBy { get; set; }
         public int MaxRejectionLimit { get; set; }
+        public bool IsNew { get; set; }
     }
 }

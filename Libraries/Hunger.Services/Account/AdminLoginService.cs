@@ -8,23 +8,23 @@ using Hunger.DAL.Account;
 
 namespace Hunger.Services.Account
 {
-    public class LoginService
+    public class AdminLoginService
     {
         public int CreateAdminUser(AdminUser adminUser)
         {
-            LoginDAL loginDAL = new LoginDAL();
+            AdminLoginDAL loginDAL = new AdminLoginDAL();
             return loginDAL.CreateAdminUser(adminUser);            
         }
 
         public AdminUser AdminLogin(AdminUser adminUser)
         {
-            LoginDAL loginDAL = new LoginDAL();
+            AdminLoginDAL loginDAL = new AdminLoginDAL();
             return loginDAL.AdminLogin(adminUser);            
         }
 
         public Guid GetPasswordSalt(string loginId)
         {
-            LoginDAL loginDAL = new LoginDAL();
+            AdminLoginDAL loginDAL = new AdminLoginDAL();
             return loginDAL.GetAdminPasswordSalt(loginId);
         }
     }

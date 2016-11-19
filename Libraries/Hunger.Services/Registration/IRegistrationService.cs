@@ -16,7 +16,7 @@ namespace Hunger.Services.Registration
         Hunger.Domain.Registration.Registration GetRegistrationById(int id);
         int ActivateRegistration(IEnumerable<int> registrationIds);
         int ActivateRegistration(int registration);
-        int CopyRegistrationToChef(IEnumerable<int> registrationIds);
+        int CopyRegistrationToChef(IEnumerable<Hunger.Domain.Registration.Registration> registrations);
         int CopyRegistrationToChef(Hunger.Domain.Registration.Registration registration);
         int DeactivateRegistration(IEnumerable<int> registrationIds);
         int DeactivateRegistration(int registrationId);

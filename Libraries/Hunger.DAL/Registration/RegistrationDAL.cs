@@ -5,6 +5,7 @@ using Hunger.Domain.Registration;
 using Hunger.DAL.Queries;
 using System;
 using System.Collections.Generic;
+using RDomain = Hunger.Domain.Registration;
 
 namespace Hunger.DAL.Registration
 {
@@ -28,7 +29,7 @@ namespace Hunger.DAL.Registration
         /// </summary>
         /// <param name="registration">Registration object</param>
         /// <returns>Registration id</returns>
-        public int CreateRegistration(Hunger.Domain.Registration.Registration registration)
+        public int CreateRegistration(RDomain.Registration registration)
         {            
             using (var dbConnection = Connection)
             {
@@ -40,9 +41,9 @@ namespace Hunger.DAL.Registration
         /// <summary>
         /// Accept registration for a new business
         /// </summary>
-        /// <param name="registration">Hunger.Domain.Registration.Registration Object</param>
+        /// <param name="registration">RDomain.Registration Object</param>
         /// <returns>Status</returns>
-        public int AcceptRegistration(Hunger.Domain.Registration.Registration registration)
+        public int AcceptRegistration(RDomain.Registration registration)
         {
             using (var dbConnection = Connection)
             {
@@ -56,8 +57,9 @@ namespace Hunger.DAL.Registration
         /// <param name="registration">Registration Object</param>
         /// <param name="registrationRejectionReason">Rejection Reason object</param>
         /// <returns>1 for success or throws exception</returns>
-        public int RejectRegistration(Hunger.Domain.Registration.Registration registration, RegistrationRejectionReason registrationRejectionReason)
+        public int RejectRegistration(RDomain.Registration registration, RegistrationRejectionReason registrationRejectionReason)
         {
+            int result;
             using (var dbConnection = Connection)
             {
                 OpenConnection(dbConnection);
@@ -66,7 +68,8 @@ namespace Hunger.DAL.Registration
                 {
                     try
                     {
-                        return dbConnection.Execute(RegistrationSQL.RejectRegistration, new { registration.CurrentModificationDate, registration.ModifiedBy, registration.RegistrationId, registration.CurrentIpAddress, registration.CurrentSystemName, registrationRejectionReason.RejectionReasonText });
+                        result = dbConnection.Execute(RegistrationSQL.RejectRegistration, new { registration.CurrentModificationDate, registration.ModifiedBy, registration.RegistrationId, registration.CurrentIpAddress, registration.CurrentSystemName, registrationRejectionReason.RejectionReasonText }, transaction: tran);
+                        tran.Commit();                        
                     }
                     catch(Exception ex)
                     {
@@ -76,7 +79,8 @@ namespace Hunger.DAL.Registration
                     }
                 }
                 #endregion TRAN
-            }            
+            }
+            return result;   
         }
 
         /// <summary>
@@ -85,7 +89,7 @@ namespace Hunger.DAL.Registration
         /// <param name="registration">Registration Object</param>
         /// <param name="registrationAgreementMapping">RegistrationAgreementMapping Object</param>
         /// <returns>1 for success</returns>
-        public int UpdateRegistrationAgreement(Hunger.Domain.Registration.Registration registration, RegistrationAgreementMapping registrationAgreementMapping)
+        public int UpdateRegistrationAgreement(RDomain.Registration registration, RegistrationAgreementMapping registrationAgreementMapping)
         {
             using (var dbConnection = Connection)
             {
@@ -95,8 +99,10 @@ namespace Hunger.DAL.Registration
                 {
                     try
                     {
-                        dbConnection.Execute(RegistrationSQL.RegistrationAgreementMapping, new { registrationAgreementMapping.RegistrationId, registrationAgreementMapping.AgreementId, registrationAgreementMapping.AgreedFrom, registrationAgreementMapping.AgreedTill });
-                        return dbConnection.Execute(RegistrationSQL.UpdateAgreement, new {registration.Agreement.AgreementId,  registration.CurrentModificationDate, registration.ModifiedBy, registration.AgreementAcceptedOn, registration.RegistrationId });                        
+                        int newAgreementId = registration.Agreement.AgreementId;                        
+                        int result = dbConnection.Execute(RegistrationSQL.UpdateRegistrationAgreement, new { registration.RegistrationId, registrationAgreementMapping.AgreementId, registrationAgreementMapping.AgreedFrom, registrationAgreementMapping.AgreedTill, newAgreementId, registration.CurrentModificationDate, registration.ModifiedBy, registration.AgreementAcceptedOn }, transaction: tran);
+                        tran.Commit();
+                        return result;
                     }
                     catch (Exception ex)
                     {
@@ -114,13 +120,13 @@ namespace Hunger.DAL.Registration
         /// </summary>
         /// <param name="id">registration Id</param>
         /// <returns>Registration Objects</returns>
-        public Hunger.Domain.Registration.Registration GetRegistrationById(int id)
+        public RDomain.Registration GetRegistrationById(int id)
         {
             using (var dbConnection = Connection)
             {
 
                 var result = dbConnection.QueryMultiple(RegistrationSQL.RegistrationById, new { RegistrationId = id });
-                var registration = result.Read<Hunger.Domain.Registration.Registration, Agreement, Hunger.Domain.Registration.Registration>
+                var registration = result.Read<RDomain.Registration, Agreement, RDomain.Registration>
                    (
                        (reg, agr) 
                        => { reg.Agreement = agr; return reg; },                       
@@ -140,8 +146,8 @@ namespace Hunger.DAL.Registration
                 return registration;
 
                 //CODE FOR REFERENCE
-                //return dbConnection.Query<Hunger.Domain.Registration.Registration, Agreement, IEnumerable<RegistrationAgreementMapping>
-                //    , Hunger.Domain.Registration.Registration>
+                //return dbConnection.Query<RDomain.Registration, Agreement, IEnumerable<RegistrationAgreementMapping>
+                //    , RDomain.Registration>
                 //    (
                 //    RegistrationSQL.RegistrationById, (registration, agreement, registrationAgreementMapping)
                 //    =>
@@ -187,7 +193,7 @@ namespace Hunger.DAL.Registration
         /// </summary>
         /// <param name="registration"></param>
         /// <returns>1 if success else -1</returns>
-        public int CopyRegistrationToChef(Hunger.Domain.Registration.Registration registration)
+        public int CopyRegistrationToChef(RDomain.Registration registration)
         {
             using (var dbConnection = Connection)
             {
@@ -200,7 +206,7 @@ namespace Hunger.DAL.Registration
         /// </summary>
         /// <param name="Ids">RegistrationId</param>
         /// <returns>greater than 1 for success</returns>
-        public int CopyRegistrationToChef(IEnumerable<Hunger.Domain.Registration.Registration> registrations)
+        public int CopyRegistrationToChef(IEnumerable<RDomain.Registration> registrations)
         {            
             foreach (var registration in registrations)
             {
@@ -209,7 +215,7 @@ namespace Hunger.DAL.Registration
 
             using (var dbConnection = Connection)
             {
-                return dbConnection.Execute(RegistrationSQL.MoveToChefInBulk, new { registrationIds });
+                return dbConnection.Execute(RegistrationSQL.MoveToChefInBulk);
             }
         }
 
@@ -242,5 +248,8 @@ namespace Hunger.DAL.Registration
                 return dbConnection.Execute(query, new { IsActive });
             }
         }
+        
+
+
     }
 }

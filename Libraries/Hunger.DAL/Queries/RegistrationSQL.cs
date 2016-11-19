@@ -26,17 +26,14 @@ namespace Hunger.DAL.Queries
         /// <summary>
         /// Reject a registration with a reason
         /// </summary>
-        public const string RejectRegistration = @"UPDATE Registration SET IsRegistrationAccepted = 0, ModifiedOn = @CurrentModificationDate, ModifiedBy = @ModifiedBy, IsActive = 0, NoOfTimeRejected = (ISNULL(NoOfTimeRejected, 0) + 1), IsRejected = 1 WHERE RegistrationId = @RegistrationId; "
-                + "INSERT INTO RegistrationRejectionReason(RejectionReasonText, RegistrationId, CreatedOn, CreatedBy, IpAddress, SystemName) VALUES(@RejectionReasonText, @RegistrationId, @CurrentDate, @CreatedBy, @CurrentIpAddress, @CurrentSystemName);";
-
+        public const string RejectRegistration = @"UPDATE Registration SET IsRegistrationAccepted = 0, ModifiedOn = @CurrentModificationDate, ModifiedBy = @ModifiedBy, IsActive = 0, NoOfTimeRejected = (ISNULL(NoOfTimeRejected, 0) + 1), IsRejected = 1 WHERE RegistrationId = @RegistrationId; 
+        INSERT INTO RegistrationRejectionReason(RejectionReasonText, RegistrationId, CreatedOn, CreatedBy, IpAddress, SystemName) VALUES(@RejectionReasonText, @RegistrationId, @CurrentDate, @CreatedBy, @CurrentIpAddress, @CurrentSystemName);";
+        
         /// <summary>
-        /// Insert Into RegistrationAgreementMapping
+        /// Update Registration table with new agreement Id and insert the old agreement details in Mapping table
         /// </summary>
-        public const string RegistrationAgreementMapping = @"INSERT INTO RegistrationAgreementMapping (RegistrationId, AgreementId, AgreedFrom, AgreedTill) VALUES (@RegistrationId, @AgreementId, @AgreedFrom, @AgreedTill);";
-        /// <summary>
-        /// Update Registration Table
-        /// </summary>
-        public const string UpdateAgreement = @"UPDATE Registration SET AgreementId = @AgreementId, ModifiedOn = @CurrentModificationDate, ModifiedBy = @ModifiedBy, AgreementAcceptedOn = @AgreementAcceptedOn WHERE RegistrationId = @RegistrationId;";
+        public const string UpdateRegistrationAgreement = @"INSERT INTO RegistrationAgreementMapping (RegistrationId, AgreementId, AgreedFrom, AgreedTill) VALUES (@RegistrationId, @AgreementId, @AgreedFrom, @AgreedTill);
+        UPDATE Registration SET AgreementId = @AgreementId, ModifiedOn = @CurrentModificationDate, ModifiedBy = @ModifiedBy, AgreementAcceptedOn = @AgreementAcceptedOn WHERE RegistrationId = @RegistrationId;";
 
         /// <summary>
         ///Select registration details by an Id 
@@ -65,5 +62,6 @@ namespace Hunger.DAL.Queries
         public const string MoveToChefInBulk = @"INSERT INTO CHEF (Name, RegistrationId, CreatedBy, CreatedOn)
         SELECT Name, RegistrationId, CreatedBy, CreatedOn FROM Registration
         WHERE RegistrationId IN (@RegistrationIds)";
+
     }
 }

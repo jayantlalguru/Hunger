@@ -15,6 +15,9 @@ namespace Hunger.Rest.Utilities
                 case 1:
                     return Messages.LoginSuccess;
                     break;
+                case 2:
+                    return Messages.UserCreated;
+                    break;
                 case -2:
                     return Messages.EmailIdExists;
                     break;

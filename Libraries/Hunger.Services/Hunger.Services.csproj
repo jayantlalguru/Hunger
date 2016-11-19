@@ -41,7 +41,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Account\LoginService.cs" />
+    <Compile Include="Account\AdminLoginService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Registration\IRegistrationService.cs" />
     <Compile Include="Registration\RegistrationService.cs" />

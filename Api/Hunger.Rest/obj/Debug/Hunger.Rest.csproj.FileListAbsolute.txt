@@ -34,3 +34,6 @@ D:\Work\Projects\Hunger\Api\Hunger.Rest\bin\Dapper.xml
 D:\Work\Projects\Hunger\Api\Hunger.Rest\obj\Debug\Hunger.Rest.csprojResolveAssemblyReference.cache
 D:\Work\Projects\Hunger\Api\Hunger.Rest\obj\Debug\Hunger.Rest.dll
 D:\Work\Projects\Hunger\Api\Hunger.Rest\obj\Debug\Hunger.Rest.pdb
+D:\Work\Projects\DotNet\Hunger\Api\Hunger.Rest\obj\Debug\Hunger.Rest.csprojResolveAssemblyReference.cache
+D:\Work\Projects\DotNet\Hunger\Api\Hunger.Rest\obj\Debug\Hunger.Rest.dll
+D:\Work\Projects\DotNet\Hunger\Api\Hunger.Rest\obj\Debug\Hunger.Rest.pdb

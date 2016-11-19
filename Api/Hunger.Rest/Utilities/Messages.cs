@@ -14,5 +14,6 @@ namespace Hunger.Rest.Utilities
         public const string LoginSuccess = "Login success.";
         public const string InvalidIdOrPwd = "Invalid login id or password.";
         public const string UserDisabled = "User has been disabled.";
+        public const string UserCreated = "User created successfully.";
     }
 }

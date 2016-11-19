@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Hunger.DAL.Registration;
 using Hunger.Domain.Registration;
+using RDomain = Hunger.Domain.Registration;
 
 namespace Hunger.Services.Registration
 {
@@ -24,7 +25,7 @@ namespace Hunger.Services.Registration
             return 1;
         }
 
-        public string CreateRegistration(Hunger.Domain.Registration.Registration registration)
+        public string CreateRegistration(RDomain.Registration registration)
         {
             RegistrationDAL registrationDAL = new RegistrationDAL();
             registration.Name = "Reyaansh Guru";
@@ -46,19 +47,19 @@ namespace Hunger.Services.Registration
             }
         }
         
-        public int RejectRegistration(Hunger.Domain.Registration.Registration registration, RegistrationRejectionReason registrationRejectionReason)
+        public int RejectRegistration(RDomain.Registration registration, RegistrationRejectionReason registrationRejectionReason)
         {
             RegistrationDAL registrationDAL = new RegistrationDAL();
             return registrationDAL.RejectRegistration(registration, registrationRejectionReason);
         }
 
-        public int UpdateRegistrationAgreement(Hunger.Domain.Registration.Registration registration, RegistrationAgreementMapping registrationAgreementMapping)
+        public int UpdateRegistrationAgreement(RDomain.Registration registration, RegistrationAgreementMapping registrationAgreementMapping)
         {
             RegistrationDAL registrationDAL = new RegistrationDAL();
             return registrationDAL.UpdateRegistrationAgreement(registration, registrationAgreementMapping);
         }
 
-        public Hunger.Domain.Registration.Registration GetRegistrationById(int id)
+        public RDomain.Registration GetRegistrationById(int id)
         {
             RegistrationDAL registrationDAL = new RegistrationDAL();
             return registrationDAL.GetRegistrationById(id);
@@ -70,19 +71,19 @@ namespace Hunger.Services.Registration
             return registrationDAL.ActivateRegistration(registrationIds);
         }
 
-        public int ActivateRegistration(int registration)
+        public int ActivateRegistration(int registrationId)
         {
             RegistrationDAL registrationDAL = new RegistrationDAL();
-            return registrationDAL.ActivateRegistration(registration);
+            return registrationDAL.ActivateRegistration(registrationId);
         }
 
-        public int CopyRegistrationToChef(IEnumerable<int> registrationIds)
+        public int CopyRegistrationToChef(IEnumerable<RDomain.Registration> registrations)
         {
             RegistrationDAL registrationDAL = new RegistrationDAL();
-            return registrationDAL.CopyRegistrationToChef(registrationIds);
+            return registrationDAL.CopyRegistrationToChef(registrations);
         }
 
-        public int CopyRegistrationToChef(Hunger.Domain.Registration.Registration registration)
+        public int CopyRegistrationToChef(RDomain.Registration registration)
         {
             RegistrationDAL registrationDAL = new RegistrationDAL();
             return registrationDAL.CopyRegistrationToChef(registration);

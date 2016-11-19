@@ -20,10 +20,15 @@ namespace Hunger.Rest.Controllers
         [HttpGet]
         public int CopyRegistrationToChef()
         {
-            IList<int> registrationIds = new List<int>();
-            registrationIds.Add(99);
-            registrationIds.Add(100);
-            return _registrationService.CopyRegistrationToChef(registrationIds);
+            IList<Hunger.Domain.Registration.Registration> registrations = new List<Hunger.Domain.Registration.Registration>();            
+            return _registrationService.CopyRegistrationToChef(registrations);
+        }
+
+        [HttpGet]
+        public int CopyRegistrationToChef(int id)
+        {
+            Hunger.Domain.Registration.Registration registration = new Hunger.Domain.Registration.Registration();
+            return _registrationService.CopyRegistrationToChef(registration);
         }
 
         [HttpGet]
@@ -60,7 +65,7 @@ namespace Hunger.Rest.Controllers
             Registration registration = GetRegistrationById(id);
             registration.IsActive = true;
             registration.CreatedBy = 1;
-            return registrationService.ActivateRegistration(registration);
+            return registrationService.ActivateRegistration(registration.RegistrationId);
         }
         public Registration GetRegistrationById(int id)
         {

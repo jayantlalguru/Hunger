@@ -16,7 +16,7 @@ namespace Hunger.Rest.Controllers
         // GET: api/Account
         public string Get()
         {
-            LoginService loginService = new LoginService();
+            AdminLoginService loginService = new AdminLoginService();
             AdminUser adminUser = new AdminUser();
             adminUser.LoginId = "jayant";
             adminUser.PasswordSalt = loginService.GetPasswordSalt(adminUser.LoginId);
@@ -33,7 +33,7 @@ namespace Hunger.Rest.Controllers
         // GET: api/Account/5
         public string Get(int id)
         {            
-            LoginService loginService = new LoginService();
+            AdminLoginService loginService = new AdminLoginService();
             AdminUser adminUser = new AdminUser();
             adminUser.LoginId = "reyaansh";
             adminUser.IsActive = true;
