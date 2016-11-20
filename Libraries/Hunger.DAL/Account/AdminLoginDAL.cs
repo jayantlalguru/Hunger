@@ -31,11 +31,11 @@ namespace Hunger.DAL.Account
             }
         }
 
-        public AdminUser AdminLogin(AdminUser adminUser)
+        public IEnumerable<AdminUser> AdminLogin(AdminUser adminUser)
         {
             using (var dbConnection = Connection)
             {
-                return (AdminUser)dbConnection.Query<AdminUser>(AdminSQL.AdminLogin, new { adminUser.LoginId, adminUser.Password, adminUser.CurrentDate });
+                return dbConnection.Query<AdminUser>(AdminSQL.AdminLogin, new { adminUser.LoginId, adminUser.Password, adminUser.CurrentDate });
             }            
         }
     }

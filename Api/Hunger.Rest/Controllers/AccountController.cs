@@ -13,21 +13,26 @@ namespace Hunger.Rest.Controllers
 {
     public class AccountController : ApiController
     {
+        private readonly IAdminLoginService _adminLoginService;
+        private AdminUser _adminUser;
+        public AccountController(IAdminLoginService adminLoginService, AdminUser adminUser)
+        {
+            _adminLoginService = adminLoginService;
+            _adminUser = adminUser;
+        }       
         // GET: api/Account
         public string Get()
-        {
-            AdminLoginService loginService = new AdminLoginService();
-            AdminUser adminUser = new AdminUser();
-            adminUser.LoginId = "jayant";
-            adminUser.PasswordSalt = loginService.GetPasswordSalt(adminUser.LoginId);
-            if(adminUser.PasswordSalt == null || adminUser.PasswordSalt == Guid.Empty)
+        {   
+            _adminUser.LoginId = "jayant";
+            _adminUser.PasswordSalt = _adminLoginService.GetPasswordSalt(_adminUser.LoginId);
+            if(_adminUser.PasswordSalt == null || _adminUser.PasswordSalt == Guid.Empty)
             {
                 return Messages.InvalidIdOrPwd;
             }
-            adminUser.Password = "passwor";
-            adminUser.Password = Security.Sha512Encryption(adminUser.Password, adminUser.PasswordSalt);
-            adminUser = loginService.AdminLogin(adminUser);
-            return Status.LoginMessage(adminUser.Status);
+            _adminUser.Password = "passwor";
+            _adminUser.Password = Security.Sha512Encryption(_adminUser.Password, _adminUser.PasswordSalt);
+            var adminUsers = _adminLoginService.AdminLogin(_adminUser);
+            return Status.LoginMessage(adminUsers.First().Status);
         }
 
         // GET: api/Account/5
@@ -43,21 +48,6 @@ namespace Hunger.Rest.Controllers
             adminUser.Password = Security.Sha512Encryption("password", adminUser.PasswordSalt);
             int status = loginService.CreateAdminUser(adminUser);
             return Status.LoginMessage(status);
-        }
-
-        // POST: api/Account
-        public void Post([FromBody]string value)
-        {
-        }
-
-        // PUT: api/Account/5
-        public void Put(int id, [FromBody]string value)
-        {
-        }
-
-        // DELETE: api/Account/5
-        public void Delete(int id)
-        {
         }
     }
 }

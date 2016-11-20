@@ -9,7 +9,7 @@ using RDomain = Hunger.Domain.Registration;
 
 namespace Hunger.DAL.Registration
 {
-    public class RegistrationDAL : ConnectionProperties
+    public class RegistrationDAL : ConnectionProperties, IRegistrationDAL
     {
         /// <summary>
         /// Create new agreement for customers

@@ -55,6 +55,7 @@
     <Compile Include="Queries\RegistrantSQL.cs" />
     <Compile Include="Queries\RegistrationSQL.cs" />
     <Compile Include="Registrant\RegistrantAccountDAL.cs" />
+    <Compile Include="Registration\IRegistrationDAL.cs" />
     <Compile Include="Registration\RegistrationDAL.cs" />
   </ItemGroup>
   <ItemGroup>

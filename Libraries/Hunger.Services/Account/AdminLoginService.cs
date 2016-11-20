@@ -8,7 +8,7 @@ using Hunger.DAL.Account;
 
 namespace Hunger.Services.Account
 {
-    public class AdminLoginService
+    public class AdminLoginService : IAdminLoginService
     {
         public int CreateAdminUser(AdminUser adminUser)
         {
@@ -16,7 +16,7 @@ namespace Hunger.Services.Account
             return loginDAL.CreateAdminUser(adminUser);            
         }
 
-        public AdminUser AdminLogin(AdminUser adminUser)
+        public IEnumerable<AdminUser> AdminLogin(AdminUser adminUser)
         {
             AdminLoginDAL loginDAL = new AdminLoginDAL();
             return loginDAL.AdminLogin(adminUser);            
