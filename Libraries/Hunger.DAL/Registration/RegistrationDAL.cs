@@ -6,6 +6,7 @@ using Hunger.DAL.Queries;
 using System;
 using System.Collections.Generic;
 using RDomain = Hunger.Domain.Registration;
+using Hunger.DAL.Registration.Interfaces;
 
 namespace Hunger.DAL.Registration
 {

@@ -119,10 +119,6 @@
     <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\Libraries\Hunger.DAL\Hunger.DAL.csproj">
-      <Project>{c880cce3-4485-4366-99a7-079dd69093db}</Project>
-      <Name>Hunger.DAL</Name>
-    </ProjectReference>
     <ProjectReference Include="..\..\Libraries\Hunger.Domain\Hunger.Domain.csproj">
       <Project>{e8ffb549-aca5-4431-9cac-cdd1cbc7e3e5}</Project>
       <Name>Hunger.Domain</Name>
@@ -130,6 +126,10 @@
     <ProjectReference Include="..\..\Libraries\Hunger.Services\Hunger.Services.csproj">
       <Project>{c1661a31-0259-4750-80b1-69fd343f3e1c}</Project>
       <Name>Hunger.Services</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Hunger.DependencyEngine\Hunger.DependencyEngine.csproj">
+      <Project>{894679ca-0281-4960-a91d-d309095c00b0}</Project>
+      <Name>Hunger.DependencyEngine</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>

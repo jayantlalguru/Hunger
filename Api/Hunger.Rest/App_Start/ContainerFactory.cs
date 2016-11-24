@@ -5,7 +5,8 @@ using Hunger.Services.Account;
 using Hunger.Services.Registration;
 using System.Reflection;
 using System.Web.Http;
-using Hunger.DAL.Registration;
+using Hunger.Services.Registration.Interfaces;
+using Hunger.Services.Account.Interfaces;
 
 namespace Hunger.Rest.App_Start
 {
@@ -34,8 +35,7 @@ namespace Hunger.Rest.App_Start
             builder.RegisterType<RegistrationService>().As<IRegistrationService>();
             builder.RegisterType<AdminUser>().AsSelf();
             builder.RegisterType<AdminLoginService>().As<IAdminLoginService>();
-            builder.RegisterType<RegistrationDAL>().As<IRegistrationDAL>();
-
+            
             // Set the dependency resolver to be Autofac.
             var container = builder.Build();
             config.DependencyResolver = new AutofacWebApiDependencyResolver(container);

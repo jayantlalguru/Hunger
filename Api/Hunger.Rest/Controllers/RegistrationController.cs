@@ -1,11 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Net;
-using System.Net.Http;
+﻿using System.Collections.Generic;
 using System.Web.Http;
-using Hunger.Services.Registration;
 using Hunger.Domain.Registration;
+using Hunger.Services.Registration.Interfaces;
 
 namespace Hunger.Rest.Controllers
 {

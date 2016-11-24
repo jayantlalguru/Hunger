@@ -15,7 +15,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hunger.Services", "Librarie
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hunger.Rest", "Api\Hunger.Rest\Hunger.Rest.csproj", "{DF58E5B3-5090-4BD7-AA7F-BFC06EFD7A28}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Plugins", "Plugins", "{2B8DE113-12BA-487C-932F-CC3F26DC3375}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hunger.DependencyEngine", "Api\Hunger.DependencyEngine\Hunger.DependencyEngine.csproj", "{894679CA-0281-4960-A91D-D309095C00B0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +39,10 @@ Global
 		{DF58E5B3-5090-4BD7-AA7F-BFC06EFD7A28}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DF58E5B3-5090-4BD7-AA7F-BFC06EFD7A28}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DF58E5B3-5090-4BD7-AA7F-BFC06EFD7A28}.Release|Any CPU.Build.0 = Release|Any CPU
+		{894679CA-0281-4960-A91D-D309095C00B0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{894679CA-0281-4960-A91D-D309095C00B0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{894679CA-0281-4960-A91D-D309095C00B0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{894679CA-0281-4960-A91D-D309095C00B0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -48,5 +52,6 @@ Global
 		{E8FFB549-ACA5-4431-9CAC-CDD1CBC7E3E5} = {8649F43E-0203-424B-B594-2A9EE4CE7770}
 		{C1661A31-0259-4750-80B1-69FD343F3E1C} = {8649F43E-0203-424B-B594-2A9EE4CE7770}
 		{DF58E5B3-5090-4BD7-AA7F-BFC06EFD7A28} = {7481446B-BBF6-46D0-891A-9548E32169C2}
+		{894679CA-0281-4960-A91D-D309095C00B0} = {7481446B-BBF6-46D0-891A-9548E32169C2}
 	EndGlobalSection
 EndGlobal

@@ -6,6 +6,8 @@ using System.Threading.Tasks;
 using Hunger.DAL.Registration;
 using Hunger.Domain.Registration;
 using RDomain = Hunger.Domain.Registration;
+using Hunger.Services.Registration.Interfaces;
+using Hunger.DAL.Registration.Interfaces;
 
 namespace Hunger.Services.Registration
 {

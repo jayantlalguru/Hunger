@@ -7,7 +7,7 @@ using System.Web.Http;
 using Hunger.Services.Account;
 using Hunger.Domain.Account;
 using Hunger.Rest.Utilities;
-using Hunger.Domain.Registration;
+using Hunger.Services.Account.Interfaces;
 
 namespace Hunger.Rest.Controllers
 {

@@ -1,10 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Hunger.Domain.Account;
 using Hunger.DAL.Account;
+using Hunger.Services.Account.Interfaces;
 
 namespace Hunger.Services.Account
 {

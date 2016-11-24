@@ -2,7 +2,7 @@
 using RDomain = Hunger.Domain.Registration;
 using Hunger.Domain.Registration;
 
-namespace Hunger.DAL.Registration
+namespace Hunger.DAL.Registration.Interfaces
 {
     public interface IRegistrationDAL
     {

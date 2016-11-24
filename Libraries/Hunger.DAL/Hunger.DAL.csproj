@@ -55,7 +55,7 @@
     <Compile Include="Queries\RegistrantSQL.cs" />
     <Compile Include="Queries\RegistrationSQL.cs" />
     <Compile Include="Registrant\RegistrantAccountDAL.cs" />
-    <Compile Include="Registration\IRegistrationDAL.cs" />
+    <Compile Include="Registration\Interfaces\IRegistrationDAL.cs" />
     <Compile Include="Registration\RegistrationDAL.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -67,7 +67,10 @@
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Account\Interfaces\" />
+    <Folder Include="Registrant\Interfaces\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

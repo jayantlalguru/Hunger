@@ -1,11 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Hunger.Domain.Account;
 
-namespace Hunger.Services.Account
+namespace Hunger.Services.Account.Interfaces
 {
     public interface IAdminLoginService
     {
