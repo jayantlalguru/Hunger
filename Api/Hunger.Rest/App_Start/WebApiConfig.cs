@@ -1,5 +1,4 @@
-﻿using Hunger.DependencyEngine.Engine.MEF;
-using Hunger.Rest.App_Start;
+﻿using Hunger.Rest.App_Start;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -14,17 +13,6 @@ namespace Hunger.Rest
     {
         public static void Register(HttpConfiguration config)
         {
-            //Dependency Injection Initialization
-            //ContainerFactory.BuildInstance();        
-            var pluginsPaths = ComposePluginsPaths();
-            var bootstrapper = new Bootstrapper(pluginsPaths);
-            bootstrapper.InitializeApplication();
-
-            //var autofacContainer = bootstrapper.AutofacContainer;
-
-            //var operatorOfPlugins = autofacContainer.Resolve<IOperatorOfPlugins>();
-            //operatorOfPlugins.RunPlugins();
-
             // Web API routes
             config.MapHttpAttributeRoutes();
 
@@ -50,7 +38,7 @@ namespace Hunger.Rest
 
         private static string[] ComposePluginsPaths()
         {
-            string pluginBasePath = String.Format(@"{0}\Libraries\", AppDomain.CurrentDomain.BaseDirectory);
+            string pluginBasePath = String.Format(@"{0}", AppDomain.CurrentDomain.BaseDirectory);
             var pluginsPaths = Directory.GetDirectories(pluginBasePath);
             return pluginsPaths;
         }

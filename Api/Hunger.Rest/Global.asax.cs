@@ -1,9 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.Http;
-using System.Web.Routing;
+﻿using System.Web.Http;
+using Hunger.DependencyEngine.Engine;
 
 namespace Hunger.Rest
 {
@@ -11,7 +7,13 @@ namespace Hunger.Rest
     {
         protected void Application_Start()
         {
-            GlobalConfiguration.Configure(WebApiConfig.Register);             
+            GlobalConfiguration.Configure(WebApiConfig.Register);
+            
+            // Get HttpConfiguration.
+            var config = GlobalConfiguration.Configuration;
+
+            //Dependency Injection Call
+            new ContainerFactory(config);
         }
     }
 }

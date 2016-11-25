@@ -76,3 +76,17 @@ D:\Work\Projects\DotNet\Hunger\Api\Hunger.Rest\bin\Autofac.xml
 D:\Work\Projects\DotNet\Hunger\Api\Hunger.Rest\bin\Autofac.Integration.WebApi.xml
 D:\Work\Projects\DotNet\Hunger\Api\Hunger.Rest\bin\Hunger.DependencyEngine.dll
 D:\Work\Projects\DotNet\Hunger\Api\Hunger.Rest\bin\Hunger.DependencyEngine.pdb
+D:\Work\Projects\DotNet\Hunger\Api\Hunger.Rest\bin\roslyn\csc.exe.config
+D:\Work\Projects\DotNet\Hunger\Api\Hunger.Rest\bin\roslyn\csc.rsp
+D:\Work\Projects\DotNet\Hunger\Api\Hunger.Rest\bin\roslyn\csi.exe
+D:\Work\Projects\DotNet\Hunger\Api\Hunger.Rest\bin\roslyn\csi.rsp
+D:\Work\Projects\DotNet\Hunger\Api\Hunger.Rest\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+D:\Work\Projects\DotNet\Hunger\Api\Hunger.Rest\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+D:\Work\Projects\DotNet\Hunger\Api\Hunger.Rest\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+D:\Work\Projects\DotNet\Hunger\Api\Hunger.Rest\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+D:\Work\Projects\DotNet\Hunger\Api\Hunger.Rest\bin\roslyn\System.AppContext.dll
+D:\Work\Projects\DotNet\Hunger\Api\Hunger.Rest\bin\roslyn\System.Diagnostics.StackTrace.dll
+D:\Work\Projects\DotNet\Hunger\Api\Hunger.Rest\bin\roslyn\System.IO.FileSystem.dll
+D:\Work\Projects\DotNet\Hunger\Api\Hunger.Rest\bin\roslyn\System.IO.FileSystem.Primitives.dll
+D:\Work\Projects\DotNet\Hunger\Api\Hunger.Rest\bin\roslyn\vbc.exe.config
+D:\Work\Projects\DotNet\Hunger\Api\Hunger.Rest\bin\roslyn\vbc.rsp

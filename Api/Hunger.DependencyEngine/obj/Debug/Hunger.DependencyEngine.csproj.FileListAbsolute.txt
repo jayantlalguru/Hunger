@@ -3,7 +3,6 @@ D:\Work\Projects\DotNet\Hunger\Api\Hunger.DependencyEngine\bin\Debug\Hunger.Depe
 D:\Work\Projects\DotNet\Hunger\Api\Hunger.DependencyEngine\bin\Debug\Hunger.DependencyEngine.dll
 D:\Work\Projects\DotNet\Hunger\Api\Hunger.DependencyEngine\bin\Debug\Hunger.DependencyEngine.pdb
 D:\Work\Projects\DotNet\Hunger\Api\Hunger.DependencyEngine\bin\Debug\Autofac.dll
-D:\Work\Projects\DotNet\Hunger\Api\Hunger.DependencyEngine\bin\Debug\Autofac.Integration.Mef.dll
 D:\Work\Projects\DotNet\Hunger\Api\Hunger.DependencyEngine\bin\Debug\Autofac.Integration.WebApi.dll
 D:\Work\Projects\DotNet\Hunger\Api\Hunger.DependencyEngine\bin\Debug\Hunger.DAL.dll
 D:\Work\Projects\DotNet\Hunger\Api\Hunger.DependencyEngine\bin\Debug\Hunger.Domain.dll
@@ -16,7 +15,6 @@ D:\Work\Projects\DotNet\Hunger\Api\Hunger.DependencyEngine\bin\Debug\Hunger.DAL.
 D:\Work\Projects\DotNet\Hunger\Api\Hunger.DependencyEngine\bin\Debug\Hunger.Domain.pdb
 D:\Work\Projects\DotNet\Hunger\Api\Hunger.DependencyEngine\bin\Debug\Hunger.Services.pdb
 D:\Work\Projects\DotNet\Hunger\Api\Hunger.DependencyEngine\bin\Debug\Autofac.xml
-D:\Work\Projects\DotNet\Hunger\Api\Hunger.DependencyEngine\bin\Debug\Autofac.Integration.Mef.xml
 D:\Work\Projects\DotNet\Hunger\Api\Hunger.DependencyEngine\bin\Debug\Autofac.Integration.WebApi.xml
 D:\Work\Projects\DotNet\Hunger\Api\Hunger.DependencyEngine\bin\Debug\Newtonsoft.Json.xml
 D:\Work\Projects\DotNet\Hunger\Api\Hunger.DependencyEngine\bin\Debug\System.Net.Http.Formatting.xml
