@@ -60,8 +60,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Engine\ContainerFactory.cs" />
-    <Compile Include="Engine\Interfaces\IContainerFactory.cs" />
+    <Compile Include="Engine\InstanceBuilder.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

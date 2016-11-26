@@ -1,5 +1,5 @@
 ﻿using System.Web.Http;
-using Hunger.DependencyEngine.Engine;
+using Hunger.Rest.App_Start;
 
 namespace Hunger.Rest
 {
@@ -8,12 +8,7 @@ namespace Hunger.Rest
         protected void Application_Start()
         {
             GlobalConfiguration.Configure(WebApiConfig.Register);
-            
-            // Get HttpConfiguration.
-            var config = GlobalConfiguration.Configuration;
-
-            //Dependency Injection Call
-            new ContainerFactory(config);
+            ContainerFactory.BuildContainer();
         }
     }
 }

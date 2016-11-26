@@ -9,6 +9,7 @@ D:\Work\Projects\Hunger\Libraries\Hunger.Services\bin\Debug\Dapper.xml
 D:\Work\Projects\Hunger\Libraries\Hunger.Services\obj\Debug\Hunger.Services.csprojResolveAssemblyReference.cache
 D:\Work\Projects\Hunger\Libraries\Hunger.Services\obj\Debug\Hunger.Services.dll
 D:\Work\Projects\Hunger\Libraries\Hunger.Services\obj\Debug\Hunger.Services.pdb
+D:\Work\Projects\DotNet\Hunger\Libraries\Hunger.Services\bin\Debug\Hunger.Services.dll.config
 D:\Work\Projects\DotNet\Hunger\Libraries\Hunger.Services\bin\Debug\Hunger.Services.dll
 D:\Work\Projects\DotNet\Hunger\Libraries\Hunger.Services\bin\Debug\Hunger.Services.pdb
 D:\Work\Projects\DotNet\Hunger\Libraries\Hunger.Services\bin\Debug\Hunger.DAL.dll
@@ -20,4 +21,3 @@ D:\Work\Projects\DotNet\Hunger\Libraries\Hunger.Services\bin\Debug\Dapper.xml
 D:\Work\Projects\DotNet\Hunger\Libraries\Hunger.Services\obj\Debug\Hunger.Services.csprojResolveAssemblyReference.cache
 D:\Work\Projects\DotNet\Hunger\Libraries\Hunger.Services\obj\Debug\Hunger.Services.dll
 D:\Work\Projects\DotNet\Hunger\Libraries\Hunger.Services\obj\Debug\Hunger.Services.pdb
-D:\Work\Projects\DotNet\Hunger\Libraries\Hunger.Services\bin\Debug\Hunger.Services.dll.config

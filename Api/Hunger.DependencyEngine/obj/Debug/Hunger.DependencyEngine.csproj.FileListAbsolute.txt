@@ -1,4 +1,3 @@
-D:\Work\Projects\DotNet\Hunger\Api\Hunger.DependencyEngine\obj\Debug\Hunger.DependencyEngine.csprojResolveAssemblyReference.cache
 D:\Work\Projects\DotNet\Hunger\Api\Hunger.DependencyEngine\bin\Debug\Hunger.DependencyEngine.dll.config
 D:\Work\Projects\DotNet\Hunger\Api\Hunger.DependencyEngine\bin\Debug\Hunger.DependencyEngine.dll
 D:\Work\Projects\DotNet\Hunger\Api\Hunger.DependencyEngine\bin\Debug\Hunger.DependencyEngine.pdb
@@ -20,5 +19,6 @@ D:\Work\Projects\DotNet\Hunger\Api\Hunger.DependencyEngine\bin\Debug\Newtonsoft.
 D:\Work\Projects\DotNet\Hunger\Api\Hunger.DependencyEngine\bin\Debug\System.Net.Http.Formatting.xml
 D:\Work\Projects\DotNet\Hunger\Api\Hunger.DependencyEngine\bin\Debug\System.Web.Http.xml
 D:\Work\Projects\DotNet\Hunger\Api\Hunger.DependencyEngine\bin\Debug\Dapper.xml
+D:\Work\Projects\DotNet\Hunger\Api\Hunger.DependencyEngine\obj\Debug\Hunger.DependencyEngine.csprojResolveAssemblyReference.cache
 D:\Work\Projects\DotNet\Hunger\Api\Hunger.DependencyEngine\obj\Debug\Hunger.DependencyEngine.dll
 D:\Work\Projects\DotNet\Hunger\Api\Hunger.DependencyEngine\obj\Debug\Hunger.DependencyEngine.pdb
